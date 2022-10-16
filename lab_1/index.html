@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Лабораторная работа 1 - Baban Victoria, K33412</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Baban Victoria, K33412</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#1" class="nav-link">Лабораторная работа 1</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#2" class="nav-link">Вариант 2. Платформа для поиска профессиональных мероприятий</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="1">Лабораторная работа 1</h1>
+<h2 id="2">Вариант 2. Платформа для поиска профессиональных мероприятий</h2>
+<ul>
+<li>index.html - страница с поиском мероприятий</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Поиск мероприятий&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot; &gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container d-flex p-3 justify-content-center h2&quot;&gt;Найди подходящее мероприятие&lt;/div&gt;
+    &lt;div class=&quot;container input-group mb-3&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Поиск мероприятия&quot; aria-label=&quot;Найди подходящее меропритие&quot; aria-describedby=&quot;button-addon2&quot;&gt;
+        &lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;submit&quot; id=&quot;button-addon2&quot;&gt;Поиск&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container d-grid gap-2 d-md-flex justify-content-center&quot;&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;district&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;true&quot;&gt;
+                Район
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;district&quot;&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;admiral&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;admiral&quot;&gt;
+                            Адмиралтейский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;vasileostrov&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;vasileostrov&quot;&gt;
+                            Василеостровский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;vyborg&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;vyborg&quot;&gt;
+                            Выборгский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;kalininsk&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;kalininsk&quot;&gt;
+                            Калининский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;kirov&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;kirov&quot;&gt;
+                            Кировский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;kolpin&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;kolpin&quot;&gt;
+                            Колпинский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;krasnogvard&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;krasnogvard&quot;&gt;
+                            Красногвардейский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;krasnosel&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;krasnosel&quot;&gt;
+                            Красносельский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;kronshtad&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;kronshtad&quot;&gt;
+                            Кронштадский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;kyrort&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;kyrort&quot;&gt;
+                            Курортный
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;moskov&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;moskov&quot;&gt;
+                            Московский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;nevsk&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;nevsk&quot;&gt;
+                            Невский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;petrograd&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;petrograd&quot;&gt;
+                            Петроградский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;petrodvor&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;petrodvor&quot;&gt;
+                            Петродворцовый
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;primorsk&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;primorsk&quot;&gt;
+                            Приморский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;pushkin&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;pushkin&quot;&gt;
+                            Пушкинский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;frunsen&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;frunsen&quot;&gt;
+                            Фрунзенский
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;center&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;center&quot;&gt;
+                            Центральный
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;Category&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;true&quot;&gt;
+                Категории
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;Category&quot;&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;theatre&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;theatre&quot;&gt;
+                            Театры
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;concert&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;concert&quot;&gt;
+                            Концерты
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;sport&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;sport&quot;&gt;
+                            Спорт и фитнес
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;games&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;games&quot;&gt;
+                            Игры
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;art&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;art&quot;&gt;
+                            Исскуство и культура
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;career&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;career&quot;&gt;
+                            Карьера
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;education&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;education&quot;&gt;
+                            Образование
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;animals&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;animals&quot;&gt;
+                            Животные
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;hobby&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;hobby&quot;&gt;
+                            Хобби
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;nature&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;nature&quot;&gt;
+                            Природа
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;price&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;true&quot;&gt;
+                Стоимость
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;price&quot;&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;free&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;free&quot;&gt;
+                            Бесплатно
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;less1000&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;less1000&quot;&gt;
+                            До 1000 рублей
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;1-2&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;1-2&quot;&gt;
+                            1000 - 2000
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;2-3&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;2-3&quot;&gt;
+                            2000 - 3000
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;3-4&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;3-4&quot;&gt;
+                            3000 - 4000
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;4-5&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;4-5&quot;&gt;
+                            4000 - 5000
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;more5000&quot;&gt;
+                        &lt;label class=&quot;form-check-label&quot; for=&quot;more5000&quot;&gt;
+                            Больше 5000
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;type&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;true&quot;&gt;
+                Тип
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;type&quot;&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Любой тип&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Очно&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Онлайн&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container p-3&quot;&gt;
+        &lt;div class=&quot;row row-cols-1 row-cols-md-3 g-4&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;http://sports-gorod.ru/wp-content/uploads/2019/06/hsTlCja_5Fk.jpg&quot; class=&quot;card-img-top img-fluid&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Спорт и фитнес&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;16.10.2022 12:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;«Пока ты спал» | Йога в парках Петербурга&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around &quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;парк Сосновка&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;Бесплатно&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;promo.html&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;https://pln-pskov.ru/prptfiles/2019/10/29/big/15723522413.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Театры&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;2.11.2022 19:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Спектакль &quot;Бешеные деньги&quot;&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Театр комедии им. Акимова&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;от 500 руб&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;https://yesofcorsa.com/wp-content/uploads/2017/05/Hans-Zimmer-Photo.jpg&quot; class=&quot;card-img-top img-fluid &quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Концерты&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;13.11.2022 19:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Hans Zimmer’s Universe&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Ледовый дворец &lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;от 1200 руб&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;https://kuda-sochi.ru/uploads/34ec8784a300d82aca3a155a712fc33f.jpeg&quot; class=&quot;card-img-top img-fluid&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Искусство и культура&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;12-13.11.2022 15:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Уроки живописи&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Летний сад&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;300 руб&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;https://yandex-images.clstorage.net/4fGCG7232/056750Yh/55eUhF0BqzsZElM2RM98PZY62xOv7gVI7kNCtDqPSUzRaLIDApQMRKQlACtQg0tl0GLMtpsoukCNg6ukFTpzIIbjoNR5kA5aTIaDYuDe_PiCGspyn5426pixsMaMjBuP5ypD84NEzAXAlVWNliLMMvTwmKIcW9zUSHV6pAaJdlMntKbi-QZIeShh4Qe06c58RgyZkx4exAvbsID0DE8oDTfLkzLw5qzGFTckPEa0jeHnAttgnEouNniG6JQ2O4ZAFaS2gKr2GxsKkEPUxvnv3weOeHHfb0doyJOTdAydGdyH2AADwgX81HTWxjykpF6h9sPogK8IvEWLpbs0dSumkTTkZDOZNvnoaHOCRzcLXN9mPMog_99VW-nQ8pWsPChs5TswoeIm3dQX9_WsNsWOs_RyWLMsCs8HigdLR9U65LAEx5fBKyWZWPoDAQdH2gyeVb060P-tdYj4gJKEPF3KDNQ4EtIDd54GVPbGHOX23NFVoftx7BvMdCuWuTa3mrRCZfTV46mnyQjLYYFXBmktjpd9KxGPj3aZ-YDCB66fqX8U6nKS0YW89DX11g13BY6wtaG7A17J_iRLpOjlZJhXkFZHpQDL5_kYS_NAV3fpjn0XTJsi7J436GhDUIUMXGh-BihQkfHU_wcm5dV8BrXMEJUz22Acab7EaAV5tBRoR5JV9YUgWsULWTtRIoRHWr2Ohx1ZoxyfNisKYUGVne_6nMc70LChxEx2NAYmLuRXTzC20miBXhmeR7vHaTYWiqRSZXbEgGj2a3hZs4HERri-vlac-nNPfzR766PR9749i790KAHgopZfVOcXd8xE9U0ydgGKAB_ZfWdLlXtHZHsUUSV2h2NrR4poK5NAhTWZbq6XTkoDj41HaVgBkjeOv0m-x5vAoYMkD3b05EfeNEQOEgSx6KOMCX43KPeoBjY45HGV5GVAWcVL6igDY2bkmtyfFE86sV1OlIlL8bFGLK5bA&quot; class=&quot;card-img-top img-fluid&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Театры&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;2.11.2022 19:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Балет &quot;Лебединое озеро&quot;&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Михайловский театр&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;от 2000 руб&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;http://uosd.spbu.ru/images/news/banner-955x800.jpg&quot; class=&quot;card-img-top img-fluid&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Карьера&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;15.10.2022 11:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;День карьеры СПбГУ&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;Университетская наб., д. 7/9&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;Бесплатно&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;div class=&quot;card h-100&quot;&gt;
+                    &lt;img src=&quot;https://urpc.ru/upload/Official/photo/9dVeEVlORZU.jpg&quot; class=&quot;card-img-top img-fluid&quot; alt=&quot;...&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Карьера&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;26-27.11.2022&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Онлайн-форум YouLead 2022&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text &quot;&gt;Онлайн&lt;/p&gt;
+                            &lt;p class=&quot;card-text text-success&quot;&gt;Бесплатно&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>calender.html - календарь мероприятий</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Календарь мероприятий&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+      &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+      EventMap
+    &lt;/a&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+      &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+      &lt;div class=&quot;navbar-nav&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+        &lt;a class=&quot;nav-link active&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+      &lt;form class=&quot;justify-content-end&quot;&gt;
+          &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+          &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+      &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container d-flex p-5 justify-content-center&quot;&gt;
+        &lt;iframe src=&quot;https://calendar.yandex.ru/embed/month?&amp;layer_ids=20055138&amp;tz_id=Europe/Moscow&amp;layer_names=Календарь мероприятий для сайта&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; style=&quot;border: 1px solid #eee&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>promo.html - страница мероприятия</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;«Пока ты спал» | Йога в парках Петербурга&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;section class=&quot;container col-8 border justify-content-center bg-white py-3&quot;&gt;
+    &lt;div class=&quot;d-flex flex-row&quot;&gt;
+        &lt;img src=&quot;http://sports-gorod.ru/wp-content/uploads/2019/06/hsTlCja_5Fk.jpg&quot;  height=&quot;300&quot; alt=&quot;...&quot;&gt;
+        &lt;div class=&quot;d-flex flex-column p-2 &quot;&gt;
+            &lt;h2 class=&quot;text-center&quot;&gt;«Пока ты спал» | Йога в парках Петербурга&lt;/h2&gt;
+            &lt;dl class=&quot;row p-4&quot;&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Дата проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;16 октября 2022&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Время проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;12:00-13:00&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Место проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;парк Сосновка&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Стоимость:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;Бесплатно&lt;/dd&gt;
+            &lt;/dl&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;section class=&quot;lead py-3 px-1&quot;&gt;
+        &lt;p&gt;В основе концепции проекта лежит идея переосмысления общественного пространства, в частности, парков, и его интеграции в жизнь горожан.&lt;/p&gt;
+        &lt;p&gt;С мая по сентябрь (иногда, октябрь) проект запускает бесплатные занятия йогой и другими физическими активностями в парках Санкт-Петербурга для всех желающих (для людей разных возрастов и уровней подготовки).&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;py-3 px-1 mb-3&quot;&gt;
+        &lt;h4 class=&quot;mb-2&quot;&gt;Дорогие друзья, хотим сообщить вам, что это последнее занятие в этом году! &lt;/h4&gt;
+        &lt;p class=&quot;card-text&quot;&gt;Мы ждем вас на последнем занятии йогой на открытом воздухе 16 октября в 15:00. Сбор начинается в 14:50. Коврики есть, но можете взять свой. Одевайтесь по погоде.&lt;/p&gt;
+        &lt;p&gt;Если погода ухудшится и занятие отменится, то мы сообщим вам об этом.&lt;/p&gt;
+        &lt;p&gt;&lt;b&gt;Контакты:&lt;/b&gt; +7 (921) 123-45-67 Иванов Иван Иванович&lt;/p&gt;
+        &lt;form class=&quot;d-flex justify-content-center&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn&quot; style=&quot;background-color: #20c997;&quot;&gt;Записаться на занятие&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+    &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+        &lt;iframe src=&quot;https://yandex.ru/map-widget/v1/?um=constructor%3Ac36459710953f2aa0d5ddaebd0bdedcff1180bf0688514cfb643d3ccdfc4225a&amp;amp;source=constructor&quot; width=&quot;700&quot; height=&quot;400&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>log_in.html - вход</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Вход в личный кабинет&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form action=&quot;lk.html&quot;&gt; &lt;!--пока что просто ссылка на страницу личного кабинета--&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;login&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;login&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Введите пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary mb-3&quot;&gt;Войти&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex &quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Забыли пароль?&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;ms-2&quot;&gt;Восстановить&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Еще нет аккаунта?&lt;/p&gt;
+            &lt;a href=&quot;sign_up.html&quot; class=&quot;ms-2&quot;&gt;Зарегистрируйся&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>sign_up.html - регистрация</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Регистрация&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form &gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;name&quot; class=&quot;form-label&quot;&gt;Ваше имя:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Придумайте пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;passwordRepeat&quot; class=&quot;form-label&quot;&gt;Введите пароль еще раз:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;passwordRepeat&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary mb-3&quot;&gt;Зарегистрироваться&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Уже есть аккаунт?&lt;/p&gt;
+            &lt;a href=&quot;log_in.html&quot; class=&quot;ms-2&quot;&gt;Войти&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>lk.html - личный кабинет пользователя</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Личный кабинет&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link &quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex justify-content-end&quot;&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;lk.html&quot;&gt;
+                &lt;img src=&quot;https://e7.pngegg.com/pngimages/398/54/png-clipart-silhouette-graphics-male-silhouette-animals-hand.png&quot; alt=&quot;&quot; width=&quot;24&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+                Имя пользователя
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;index.html&quot; role=&quot;button&quot;&gt;Выйти&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main class=&quot;p-5 container-fluid d-flex flex-row&quot;&gt;
+    &lt;aside  class=&quot;col-lg-3   d-flex flex-column justify-content-start&quot;&gt;
+        &lt;img src=&quot;https://e7.pngegg.com/pngimages/398/54/png-clipart-silhouette-graphics-male-silhouette-animals-hand.png&quot; height=&quot;auto&quot; alt=&quot;Фото профиля&quot; class=&quot;img-fluid img-thumbnail&quot;&gt;
+        &lt;ul class=&quot;list-group col-12&quot;&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark&quot; href=&quot;#&quot;&gt;Основные данные&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item list-group-item-secondary&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark active&quot; aria-current=&quot;true&quot; href=&quot;#&quot;&gt;Мои мероприятия&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark&quot; href=&quot;#&quot;&gt;Настройки профиля&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-danger text-decoration-none link-dark&quot; href=&quot;index.html&quot;&gt;Выйти&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+    &lt;section class=&quot;col-lg-9   px-5&quot;&gt;
+        &lt;h2&gt;Мои мероприятия&lt;/h2&gt;
+        &lt;div class=&quot;col row-1 col-12  g-4 py-3&quot;&gt;
+            &lt;div class=&quot;row g-0 mb-2 border&quot;&gt;
+                &lt;div class=&quot;col-md-4 d-flex align-items-center&quot;&gt;
+                    &lt;img src=&quot;https://sun9-37.userapi.com/c840026/v840026794/40f4c/USAxOPZTkHo.jpg&quot; class=&quot;img-fluid &quot; alt=&quot;...&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-8 d-flex flex-column justify-content-around&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Театры&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;2.11.2022 19:00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around&quot; style=&quot;background-color: white&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Спектакль &quot;Бешеные деньги&quot;&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-location&quot;&gt;Театр комедии им. Акимова&lt;/p&gt;
+                            &lt;p class=&quot;card-cost&quot;&gt;от 500 руб&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;form class=&quot;flex-column justify-content-around&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;btn btn-danger col-5 align-self-center&quot;&gt;Отменить запись&lt;/a&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;row g-0 mb-2 border&quot;&gt;
+                &lt;div class=&quot;col-md-4 d-flex align-items-center&quot;&gt;
+                    &lt;img src=&quot;https://urpc.ru/upload/Official/photo/9dVeEVlORZU.jpg&quot; class=&quot;img-fluid&quot; alt=&quot;...&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-8 d-flex flex-column justify-content-around&quot;&gt;
+                    &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;
+                        &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot;  role=&quot;button&quot;&gt;Карьера&lt;/a&gt;
+                        &lt;p class=&quot;card-text&quot;&gt;26-27.11.2022&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around&quot; style=&quot;background-color: white&quot;&gt;
+                        &lt;h5 class=&quot;card-title&quot;&gt;Онлайн-форум YouLead 2022&lt;/h5&gt;
+                        &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                            &lt;p class=&quot;card-text card-location&quot;&gt;Онлайн&lt;/p&gt;
+                            &lt;p class=&quot;card-text card-cost&quot;&gt;Бесплатно&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;form class=&quot;flex-column justify-content-around&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;btn btn-danger col-5 align-self-center&quot; &gt;Отменить запись&lt;/a&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+
+&lt;/main&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
