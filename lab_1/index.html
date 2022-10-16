@@ -57,32 +57,32 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#indexhtml-" class="nav-link">* index.html - страница с поиском мероприятий</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Вход</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#calenderhtml-" class="nav-link">* calender.html - календарь мероприятий</a>
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link">Регистрация</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#promohtml-" class="nav-link">* promo.html - страница мероприятия</a>
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">Поиск мероприятия</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#log_inhtml-" class="nav-link">* log_in.html - вход</a>
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">Календарь мероприятий</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#sign_uphtml-" class="nav-link">* sign_up.html - регистрация</a>
+            <li class="nav-item" data-level="1"><a href="#_5" class="nav-link">Страница мероприятия</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#lkhtml-" class="nav-link">* lk.html - личный кабинет пользователя</a>
+            <li class="nav-item" data-level="1"><a href="#_6" class="nav-link">Личный кабинет пользователя</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -93,7 +93,165 @@
 
 <h1 id="1">Лабораторная работа 1</h1>
 <h3 id="2">Вариант 2. Платформа для поиска профессиональных мероприятий</h3>
-<h1 id="indexhtml-">* <code>index.html</code> - страница с поиском мероприятий</h1>
+<p>Реализовать вёрстку следующих страниц:</p>
+<ul>
+<li>
+<p>Вход</p>
+</li>
+<li>
+<p>Регистрация</p>
+</li>
+<li>
+<p>Поиск мероприятия (фильтрации по типу мероприятия, месту проведения)</p>
+</li>
+<li>
+<p>Календарь ближайших мероприятий</p>
+</li>
+<li>
+<p>Страница мероприятия</p>
+</li>
+<li>
+<p>Личный кабинет пользователя со списком мероприятий, на которые он записывался</p>
+</li>
+</ul>
+<h1 id="_1">Вход</h1>
+<ul>
+<li><code>log_in.html</code> - вход</li>
+</ul>
+<p>Скриншот:</p>
+<p><img alt="Картинка" src="../log_in.png" /></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Вход в личный кабинет&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form action=&quot;lk.html&quot;&gt; &lt;!--пока что просто ссылка на страницу личного кабинета--&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;login&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;login&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Введите пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Войти&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex &quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Забыли пароль?&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;ms-2 text-success&quot;&gt;Восстановить&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Еще нет аккаунта?&lt;/p&gt;
+            &lt;a href=&quot;sign_up.html&quot; class=&quot;ms-2 text-success&quot;&gt;Зарегистрируйся&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="_2">Регистрация</h1>
+<ul>
+<li><code>sign_up.html</code> - регистрация</li>
+</ul>
+<p>Скриншот:</p>
+<p><img alt="Картинка" src="../sign_up.png" /></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Регистрация&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form &gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;name&quot; class=&quot;form-label&quot;&gt;Ваше имя:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Придумайте пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;passwordRepeat&quot; class=&quot;form-label&quot;&gt;Введите пароль еще раз:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;passwordRepeat&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Зарегистрироваться&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Уже есть аккаунт?&lt;/p&gt;
+            &lt;a href=&quot;log_in.html&quot; class=&quot;ms-2 text-success&quot;&gt;Войти&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="_3">Поиск мероприятия</h1>
+<ul>
+<li><code>index.html</code> - страница с поиском мероприятий</li>
+</ul>
 <p>Скриншот:</p>
 <p><img alt="Картинка" src="../index.png" /></p>
 <p>Код:</p>
@@ -599,7 +757,10 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h1 id="calenderhtml-">* <code>calender.html</code> - календарь мероприятий</h1>
+<h1 id="_4">Календарь мероприятий</h1>
+<ul>
+<li><code>calender.html</code> - календарь мероприятий</li>
+</ul>
 <p>Скриншот:</p>
 <p><img alt="Картинка" src="../calendar.png" /></p>
 <p>Код:</p>
@@ -657,7 +818,10 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h1 id="promohtml-">* <code>promo.html</code> - страница мероприятия</h1>
+<h1 id="_5">Страница мероприятия</h1>
+<ul>
+<li><code>promo.html</code> - страница мероприятия</li>
+</ul>
 <p>Скриншот:</p>
 <p><img alt="Картинка" src="../promo.png" /></p>
 <p>Код:</p>
@@ -744,135 +908,10 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h1 id="log_inhtml-">* <code>log_in.html</code> - вход</h1>
-<p>Скриншот:</p>
-<p><img alt="Картинка" src="../log_in.png" /></p>
-<p>Код:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Вход в личный кабинет&lt;/title&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;/head&gt;
-&lt;body class=&quot;bg-light&quot;&gt;
-&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;
-        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
-            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
-            EventMap
-        &lt;/a&gt;
-        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
-            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
-            &lt;div class=&quot;navbar-nav&quot;&gt;
-                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
-                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;form class=&quot;justify-content-end&quot;&gt;
-            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
-            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-&lt;main&gt;
-    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
-        &lt;form action=&quot;lk.html&quot;&gt; &lt;!--пока что просто ссылка на страницу личного кабинета--&gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;login&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
-                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;login&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Введите пароль:&lt;/label&gt;
-                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
-                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Войти&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
-        &lt;div class=&quot;container d-flex &quot;&gt;
-            &lt;p class=&quot;text-black&quot;&gt;Забыли пароль?&lt;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;ms-2 text-success&quot;&gt;Восстановить&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;container d-flex&quot;&gt;
-            &lt;p class=&quot;text-black&quot;&gt;Еще нет аккаунта?&lt;/p&gt;
-            &lt;a href=&quot;sign_up.html&quot; class=&quot;ms-2 text-success&quot;&gt;Зарегистрируйся&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="sign_uphtml-">* <code>sign_up.html</code> - регистрация</h1>
-<p>Скриншот:</p>
-<p><img alt="Картинка" src="../sign_up.png" /></p>
-<p>Код:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Регистрация&lt;/title&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;/head&gt;
-&lt;body class=&quot;bg-light&quot;&gt;
-&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;
-        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
-            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
-            EventMap
-        &lt;/a&gt;
-        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
-            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
-            &lt;div class=&quot;navbar-nav&quot;&gt;
-                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;Поиск мероприятий&lt;/a&gt;
-                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;Календарь мероприятий&lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;form class=&quot;justify-content-end&quot;&gt;
-            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;Вход&lt;/a&gt;
-            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;Регистрация&lt;/a&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-&lt;main&gt;
-    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
-        &lt;form &gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;name&quot; class=&quot;form-label&quot;&gt;Ваше имя:&lt;/label&gt;
-                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
-                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Придумайте пароль:&lt;/label&gt;
-                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;mb-3&quot;&gt;
-                &lt;label for=&quot;passwordRepeat&quot; class=&quot;form-label&quot;&gt;Введите пароль еще раз:&lt;/label&gt;
-                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;passwordRepeat&quot;&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
-                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Зарегистрироваться&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
-        &lt;div class=&quot;container d-flex&quot;&gt;
-            &lt;p class=&quot;text-black&quot;&gt;Уже есть аккаунт?&lt;/p&gt;
-            &lt;a href=&quot;log_in.html&quot; class=&quot;ms-2 text-success&quot;&gt;Войти&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="lkhtml-">* <code>lk.html</code> - личный кабинет пользователя</h1>
+<h1 id="_6">Личный кабинет пользователя</h1>
+<ul>
+<li><code>lk.html</code> - личный кабинет пользователя</li>
+</ul>
 <p>Скриншот:</p>
 <p><img alt="Картинка" src="../lk.png" /></p>
 <p>Код:</p>
