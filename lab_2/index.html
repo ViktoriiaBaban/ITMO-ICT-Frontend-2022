@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Лабораторная работа 2 - Baban Victoria, K33412</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Baban Victoria, K33412</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Лабораторные <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lab_1/" class="dropdown-item">ЛР_1</a>
+</li>
+                                    
+<li>
+    <a href="../lab_3/" class="dropdown-item">ЛР_3</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Домашние <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../pw_2/" class="dropdown-item">ДР_2</a>
+</li>
+                                    
+<li>
+    <a href="../pw_3/" class="dropdown-item">ДР_3</a>
+</li>
+                                    
+<li>
+    <a href="../pw_4/" class="dropdown-item">ДР_4</a>
+</li>
+                                    
+<li>
+    <a href="../pw_5/" class="dropdown-item">ДР_5</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#2" class="nav-link">Лабораторная работа 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Вход</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link">Регистрация</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">Поиск мероприятия</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">Календарь мероприятий</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_5" class="nav-link">Страница мероприятия</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_6" class="nav-link">Личный кабинет пользователя</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#js" class="nav-link">Скрипты JS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_7" class="nav-link">Вывод</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="2">Лабораторная работа 2</h1>
+<p>Вариант 2. Платформа для поиска профессиональных мероприятий</p>
+<p>Нужно привязать то, что я делала в ЛР1 к внешнему API средствами fetch/axios/xhr.</p>
+<h1 id="_1">Вход</h1>
+<ul>
+<li><code>log_in.html</code> - вход</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/9NDMXJq"><img src="https://i.ibb.co/80Ch3Jj/login.png" alt="login" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Вход в личный кабинет&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#login&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot; &gt;
+                    &lt;use xlink:href=&quot;#signup&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form onsubmit=&quot;login(event)&quot;&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Введите пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Войти&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Еще нет аккаунта?&lt;/p&gt;
+            &lt;a href=&quot;sign_up.html&quot; class=&quot;ms-2 text-success&quot;&gt;Зарегистрируйся&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;script src=&quot;js/user.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h1 id="_2">Регистрация</h1>
+<ul>
+<li><code>sign_up.html</code> - регистрация</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/jw5P8G2"><img src="https://i.ibb.co/VCNcLDZ/signup.png" alt="signup" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Регистрация&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;log_in.html&quot; role=&quot;button&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#login&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;sign_up.html&quot; role=&quot;button&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot; &gt;
+                    &lt;use xlink:href=&quot;#signup&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Регистрация&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;div class=&quot;container col-md-6 p-5&quot;&gt;
+        &lt;form onsubmit=&quot;newUser(event)&quot;&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;name&quot; class=&quot;form-label&quot;&gt;Ваше имя:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;email&quot; class=&quot;form-label&quot;&gt;Введите свой e-mail:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                &lt;label for=&quot;password&quot; class=&quot;form-label&quot;&gt;Придумайте пароль:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;p-4 d-flex justify-content-center&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-success mb-3&quot;&gt;Зарегистрироваться&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;container d-flex&quot;&gt;
+            &lt;p class=&quot;text-black&quot;&gt;Уже есть аккаунт?&lt;/p&gt;
+            &lt;a href=&quot;log_in.html&quot; class=&quot;ms-2 text-success&quot;&gt;Войти&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;script src=&quot;js/user.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h1 id="_3">Поиск мероприятия</h1>
+<ul>
+<li><code>index.html</code> - страница с поиском мероприятий</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/WxhnQRQ"><img src="https://i.ibb.co/DVJ4NjN/main-view.png" alt="main-view" border="0"></a></p>
+<p><a href="https://ibb.co/TRB8GHq"><img src="https://i.ibb.co/5vW835x/main-view-filtered.png" alt="main-view-filtered" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Поиск мероприятий&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light min-vh-100&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;./log_in.html&quot; role=&quot;button&quot; id=&quot;enter&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#login&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;./sign_up.html&quot; role=&quot;button&quot; id=&quot;registr&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot; &gt;
+                    &lt;use xlink:href=&quot;#signup&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Регистрация&lt;/a&gt;
+            &lt;a class=&quot;btn btn-light me-2 d-none&quot; href=&quot;./lk.html&quot; id=&quot;enterlk&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#lk&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Личный кабинет&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light d-none&quot; id=&quot;logout&quot; href=&quot;#&quot; onclick=&quot;logout()&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#log_out&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Выход&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main class=&quot;min-vh-100&quot;&gt;
+    &lt;div class=&quot;container d-flex p-3 justify-content-center h2&quot;&gt;Найди подходящее мероприятие&lt;/div&gt;
+    &lt;div class=&quot;container d-grid gap-2 d-md-flex justify-content-center&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;form col-12 col-sm-6 col-lg-4 col-md-5 col-xl-3&quot;&gt;
+                &lt;select class=&quot;form-select event-region&quot; aria-label=&quot;.form-select-lg example&quot; id=&quot;district&quot;&gt;
+                    &lt;option value=&quot;all-district&quot;&gt;Район&lt;/option&gt;
+                    &lt;option value=&quot;admiral&quot;&gt;Адмиралтейский&lt;/option&gt;
+                    &lt;option value=&quot;vasileostrov&quot;&gt;Василеостровский&lt;/option&gt;
+                    &lt;option value=&quot;vyborg&quot;&gt;Выборгский&lt;/option&gt;
+                    &lt;option value=&quot;kalininsk&quot;&gt;Калининский&lt;/option&gt;
+                    &lt;option value=&quot;kirov&quot;&gt;Кировский&lt;/option&gt;
+                    &lt;option value=&quot;krasnogvard&quot;&gt;Красногвардейский&lt;/option&gt;
+                    &lt;option value=&quot;krasnosel&quot;&gt;Красносельский&lt;/option&gt;
+                    &lt;option value=&quot;kronshtad&quot;&gt;Кронштадский&lt;/option&gt;
+                    &lt;option value=&quot;moskov&quot;&gt;Московский&lt;/option&gt;
+                    &lt;option value=&quot;nevsk&quot;&gt;Невский&lt;/option&gt;
+                    &lt;option value=&quot;petrograd&quot;&gt;Петроградский&lt;/option&gt;
+                    &lt;option value=&quot;center&quot;&gt;Центральный&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form col-12 col-sm-6 col-lg-4 col-md-5 col-xl-3&quot;&gt;
+                &lt;select class=&quot;form-select event-category&quot; aria-label=&quot;.form-select-lg example&quot; id=&quot;category&quot;&gt;
+                    &lt;option value=&quot;all-category&quot;&gt;Категория&lt;/option&gt;
+                    &lt;option value=&quot;theatre&quot;&gt;Театры&lt;/option&gt;
+                    &lt;option value=&quot;concert&quot;&gt;Концерты&lt;/option&gt;
+                    &lt;option value=&quot;games&quot;&gt;Игры&lt;/option&gt;
+                    &lt;option value=&quot;sport&quot;&gt;Спорт и фитнес&lt;/option&gt;
+                    &lt;option value=&quot;art&quot;&gt;Исскуство и культура&lt;/option&gt;
+                    &lt;option value=&quot;career&quot;&gt;Карьера&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form col-12 col-sm-6 col-lg-4 col-md-5 col-xl-3&quot;&gt;
+                &lt;select class=&quot;form-select type-event&quot; aria-label=&quot;.form-select-lg example&quot; id=&quot;type-event&quot;&gt;
+                    &lt;option value=&quot;all-type&quot;&gt;Любой тип&lt;/option&gt;
+                    &lt;option value=&quot;offline&quot;&gt;Очно&lt;/option&gt;
+                    &lt;option value=&quot;online&quot;&gt;Онлайн&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;form class=&quot;d-flex justify-content-end col input-group mb-3 search-form&quot;&gt;
+                &lt;button class=&quot;btn btn-outline-secondary search-btn&quot; type=&quot;submit&quot; id=&quot;button-search&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container p-3&quot;&gt;
+        &lt;div class=&quot;row row-cols-1 row-cols-md-3 g-4&quot; id=&quot;list_events&quot;&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+
+&lt;script src=&quot;js/events.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/user.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    checkEnter()
+    loadCards()
+    categoryFilter()
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h1 id="_4">Календарь мероприятий</h1>
+<ul>
+<li><code>calender.html</code> - календарь мероприятий</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/GxgDxnZ"><img src="https://i.ibb.co/gjs8jm0/calendar.png" alt="calendar" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Календарь мероприятий&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link active&quot; href=&quot;calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;./log_in.html&quot; role=&quot;button&quot; id=&quot;enter&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#login&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;./sign_up.html&quot; role=&quot;button&quot; id=&quot;registr&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot; &gt;
+                    &lt;use xlink:href=&quot;#signup&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Регистрация&lt;/a&gt;
+            &lt;a class=&quot;btn btn-light me-2 d-none&quot; href=&quot;./lk.html&quot; id=&quot;enterlk&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#lk&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Личный кабинет&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light d-none&quot; id=&quot;logout&quot; href=&quot;#&quot; onclick=&quot;logout()&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#log_out&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Выход&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+    &lt;div class=&quot;container d-flex p-5 justify-content-center&quot;&gt;
+        &lt;iframe src=&quot;https://calendar.yandex.ru/embed/month?&amp;layer_ids=20055138&amp;tz_id=Europe/Moscow&amp;layer_names=Календарь мероприятий для сайта&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; style=&quot;border: 1px solid #eee&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+
+&lt;script src=&quot;js/user.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    checkEnter()
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h1 id="_5">Страница мероприятия</h1>
+<ul>
+<li><code>promo.html</code> - страница мероприятия</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/Pm6GJ5K"><img src="https://i.ibb.co/mDc5dHk/event-info.png" alt="event-info" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;О событии&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light min-vh-100&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot;&gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;./log_in.html&quot; role=&quot;button&quot; id=&quot;enter&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#login&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Вход&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;./sign_up.html&quot; role=&quot;button&quot; id=&quot;registr&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot; &gt;
+                    &lt;use xlink:href=&quot;#signup&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Регистрация&lt;/a&gt;
+            &lt;a class=&quot;btn btn-light me-2 d-none&quot; href=&quot;./lk.html&quot; id=&quot;enterlk&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#lk&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Личный кабинет&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light d-none&quot; id=&quot;logout&quot; href=&quot;#&quot; onclick=&quot;logout()&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#log_out&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Выход&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;section class=&quot;container col-8 border justify-content-center bg-white py-3&quot; id=&quot;about_event&quot;&gt;
+
+&lt;/section&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+
+&lt;script src=&quot;/js/events.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/js/user.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    checkEnter()
+    document.addEventListener('DOMContentLoaded', () =&gt; loadEventPage())
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="_6">Личный кабинет пользователя</h1>
+<ul>
+<li><code>lk.html</code> - личный кабинет пользователя</li>
+</ul>
+<p>Скриншот:</p>
+<p><a href="https://ibb.co/py2TVLD"><img src="https://i.ibb.co/NSxqDyh/lk.png" alt="lk" border="0"></a></p>
+<p>Код:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Личный кабинет&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; /&gt;
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; display=&quot;none&quot;&gt;
+
+        &lt;symbol id=&quot;login&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-in-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;signup&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-key&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z&quot;/&gt;
+            &lt;path d=&quot;M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;log_out&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-box-arrow-right&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;lk&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-person-circle&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z&quot;/&gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;calendar&quot;  fill=&quot;currentColor&quot; class=&quot;bi bi-calendar3&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z&quot;/&gt;
+            &lt;path d=&quot;M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;search&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-search-heart&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z&quot;/&gt;
+            &lt;path d=&quot;M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;tag&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-tag&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z&quot;/&gt;
+            &lt;path d=&quot;M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z&quot;/&gt;
+        &lt;/symbol&gt;
+
+        &lt;symbol id=&quot;place&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-geo-alt&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+            &lt;path d=&quot;M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z&quot;/&gt;
+            &lt;path d=&quot;M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z&quot;/&gt;
+        &lt;/symbol&gt;
+    &lt;/svg&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light min-vh-100&quot;&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;./logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top&quot;&gt;
+            EventMap
+        &lt;/a&gt;
+        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNavAltMarkup&quot; aria-controls=&quot;navbarNavAltMarkup&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+            &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNavAltMarkup&quot;&gt;
+            &lt;div class=&quot;navbar-nav&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; aria-current=&quot;page&quot; href=&quot;./index.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Поиск мероприятий&lt;/a&gt;
+                &lt;a class=&quot;nav-link &quot; href=&quot;./calendar.html&quot;&gt;
+                    &lt;svg class=&quot;icon m-1&quot;&gt;
+                        &lt;use xlink:href=&quot;#calendar&quot;&gt;&lt;/use&gt;
+                    &lt;/svg&gt;Календарь мероприятий&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;justify-content-end&quot; &gt;
+            &lt;a class=&quot;btn btn-light me-2&quot; href=&quot;#&quot; id=&quot;enterlk&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#lk&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Личный кабинет&lt;/a&gt;
+            &lt;a class=&quot;btn btn-sm btn-outline-light&quot; href=&quot;#&quot; role=&quot;button&quot; onclick=&quot;logout()&quot;&gt;
+                &lt;svg class=&quot;icon m-1&quot;&gt;
+                    &lt;use xlink:href=&quot;#log_out&quot;&gt;&lt;/use&gt;
+                &lt;/svg&gt;Выйти&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;main class=&quot;p-5 container-fluid d-flex flex-row&quot;&gt;
+    &lt;aside  class=&quot;col-lg-3   d-flex flex-column justify-content-start&quot;&gt;
+        &lt;img src=&quot;https://e7.pngegg.com/pngimages/398/54/png-clipart-silhouette-graphics-male-silhouette-animals-hand.png&quot; height=&quot;auto&quot; alt=&quot;Фото профиля&quot; class=&quot;img-fluid img-thumbnail&quot;&gt;
+        &lt;ul class=&quot;list-group col-12&quot;&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark&quot; href=&quot;#&quot;&gt;Пользователь: &lt;script&gt;document.write(JSON.parse(localStorage.user).name)&lt;/script&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item list-group-item-secondary&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark active&quot; aria-current=&quot;true&quot; href=&quot;#&quot;&gt;Мои мероприятия&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-decoration-none link-dark&quot; href=&quot;#&quot;&gt;Настройки профиля&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a class=&quot;text-danger text-decoration-none link-dark&quot; href=&quot;#&quot; onclick=&quot;logout()&quot;&gt;Выйти&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+    &lt;section class=&quot;col-lg-9   px-5&quot;&gt;
+        &lt;h2&gt;Мои мероприятия&lt;/h2&gt;
+        &lt;div class=&quot;col row-1 col-12  g-4 py-3&quot; id=&quot;my_events&quot;&gt;
+
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+
+&lt;/main&gt;
+&lt;footer class=&quot;d-flex flex-wrap justify-content-between align-items-center py-3 border-top navbar-expand-lg navbar-dark&quot; style=&quot;background-color: #20c997;&quot;&gt;
+    &lt;p class=&quot;col-md-4 mb-0 text-white&quot;&gt;© 2022 Company, Inc&lt;/p&gt;
+
+    &lt;a href=&quot;/&quot; class=&quot;col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-white text-decoration-none&quot;&gt;
+        &lt;img src=&quot;./logo.PNG&quot; alt=&quot;Лого&quot; width=&quot;30&quot; height=&quot;24&quot; class=&quot;d-inline-block align-text-top &quot;&gt;
+        EventMap
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;nav col-md-4 justify-content-end navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;nav-link px-2&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+
+&lt;script src=&quot;js/events.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/user.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', () =&gt; loadMyEvents())
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<ul>
+<li><code>user.js</code> - функции регистрации, авторизации, выхода пользователя</li>
+</ul>
+<p>Код:</p>
+<pre><code>
+const idLogOut = document.querySelector('#logout');
+const idLogIn = document.querySelector('#enter');
+const idRegistr = document.querySelector('#registr');
+const enterLK = document.querySelector('#enterlk');
+
+
+async function newUser(event) {
+    event.preventDefault()
+
+    const inputs = Array.from(event.target.querySelectorAll('input'))
+
+    const user_data = {}
+
+    for (const input of inputs) {
+        user_data[input.name] = input.value
+    }
+    console.log('user data: ',  user_data)
+
+    const response = await fetch('http://localhost:3000/signup', {
+        method: &quot;POST&quot;,
+        body: JSON.stringify(user_data),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    window.location.href = &quot;http://localhost:63342/lab1/log_in.html&quot;
+}
+
+async function login(event) {
+    event.preventDefault()
+
+    const inputs = Array.from(event.target.querySelectorAll('input'))
+
+    const login_data = {}
+
+    for (const input of inputs) {
+        login_data[input.name] = input.value
+    }
+    console.log('user data: ',  login_data)
+
+    const response = await fetch('http://localhost:3000/signin', {
+        method: &quot;POST&quot;,
+        body: JSON.stringify(login_data),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    const responseJson = await response.json()
+
+    const { accessToken, user } = responseJson
+
+    console.log('response', responseJson)
+
+    localStorage.accessToken = accessToken
+    localStorage.user = JSON.stringify(user)
+    checkAuth(responseJson)
+
+}
+
+function logout() {
+    localStorage.clear();
+    window.location.href = &quot;http://localhost:63342/lab1/log_in.html&quot;;
+}
+
+function checkEnter() {
+    if (localStorage.accessToken){
+        idLogIn.classList.add(&quot;d-none&quot;)
+        idRegistr.classList.add(&quot;d-none&quot;)
+        enterLK.classList.remove(&quot;d-none&quot;);
+        idLogOut.classList.remove(&quot;d-none&quot;);
+    }
+    else {
+        idLogIn.classList.remove(&quot;d-none&quot;);
+        idRegistr.classList.remove(&quot;d-none&quot;);
+        enterLK.classList.add(&quot;d-none&quot;);
+        idLogOut.classList.add(&quot;d-none&quot;);
+    }
+}
+
+function checkAuth(response) {
+    if (localStorage.accessToken) {
+        if (response != 'Email and password are required') {
+            if (response != 'Cannot find user') {
+                if (response != 'Password is too short') {
+                    if (response != 'Incorrect password') {
+                        window.location.href = &quot;lk.html&quot;
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h1 id="js">Скрипты JS</h1>
+<ul>
+<li><code>events.js</code> - функции загрузки данных событий и их отображения, фильтрация события, записи на события и их отмены.</li>
+</ul>
+<p>Код:</p>
+<pre><code>function getCardEventHTML(event) {
+    return `
+&lt;div class=&quot;col&quot;&gt;
+    &lt;div class=&quot;card h-100 all-category ${event['category']} all-district ${event['district']} all-type ${event['event-type']}&quot; event_id=&quot;${event['id']}&quot;&gt;
+        &lt;img src=&quot;${event['img']}&quot; class=&quot;card-img-top img-fluid&quot;
+             alt=&quot;...&quot;&gt;
+            &lt;div class=&quot;card-header d-flex justify-content-between align-content-center&quot;&gt;
+                &lt;a class=&quot;btn btn-outline-secondary btn-sm col px-2&quot; role=&quot;button&quot;&gt;
+            &lt;svg class=&quot;icon m-1&quot;&gt;
+              &lt;use xlink:href=&quot;#tag&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;${event['category_name']}&lt;/a&gt;
+                &lt;p class=&quot;card-text col px-2&quot;&gt;${event['date']} ${event['time']}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around p-3&quot;&gt;
+                &lt;h5 class=&quot;card-title&quot;&gt;${event['title']}&lt;/h5&gt;
+                &lt;div class=&quot;card-text d-flex justify-content-around &quot;&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;
+            &lt;svg class=&quot;icon m-1&quot;&gt;
+              &lt;use xlink:href=&quot;#place&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;${event['place']}&lt;/p&gt;
+                    &lt;p class=&quot;card-text text-success&quot;&gt;${event['price']}&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text d-flex justify-content-around &quot;&gt;
+                    &lt;a onclick=&quot;aboutEvent(${event['id']})&quot; href=&quot;promo.html&quot; class=&quot;btn  align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        `
+}
+
+async function loadCards() {
+    const response = await fetch('http://localhost:3000/events', {
+        method: &quot;GET&quot;
+    })
+
+    document.querySelector(&quot;#list_events&quot;).innerHTML = &quot;&quot;
+    const responseJson = await response.json()
+    console.log('response', responseJson)
+
+    for (const data of responseJson) {
+        document.querySelector(&quot;#list_events&quot;).innerHTML += getCardEventHTML(data)
+    }
+}
+
+function aboutEvent(id) {
+    const event_id = id
+    localStorage.setItem('event_id', event_id)
+}
+
+function getEventPageHTML(event) {
+    return `
+    &lt;div class=&quot;d-flex flex-row&quot;&gt;
+        &lt;img src=&quot;${event['img']}&quot;  alt=&quot;${event['title']}&quot; class=&quot;img-fluid&quot; style=&quot;max-height: 300px; width: auto;&quot;&gt;
+        &lt;div class=&quot;d-flex flex-column p-2 &quot;&gt;
+            &lt;h2 class=&quot;text-center&quot;&gt;${event['title']}&lt;/h2&gt;
+            &lt;dl class=&quot;row p-4&quot;&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Дата проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;${event['date']}&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Время проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;${event['time']}&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Место проведения:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;${event['place']}&lt;/dd&gt;
+                &lt;dt class=&quot;col-sm-7&quot;&gt;Стоимость:&lt;/dt&gt;
+                &lt;dd class=&quot;col-sm-5&quot;&gt;${event['price']}&lt;/dd&gt;
+            &lt;/dl&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;section class=&quot;py-3 px-1 mb-3&quot;&gt;
+        &lt;p&gt;${event['description']}&lt;/p&gt;
+        &lt;p&gt;&lt;b&gt;Контакты:&lt;/b&gt; ${event['contact_number']} ${event['contact_name']}&lt;/p&gt;
+        &lt;form class=&quot;d-flex justify-content-center&quot; onclick=&quot;registerForEvent(${event['id']})&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn&quot; style=&quot;background-color: #20c997;&quot;&gt;Записаться на занятие&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+    &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+        &lt;iframe src=&quot;${event['map']}&quot; width=&quot;700&quot; height=&quot;400&quot; frameborder=&quot;0&quot; title=&quot;map&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    `
+}
+
+async function loadEventPage() {
+    let event_id = localStorage.getItem('event_id')
+    const response = await fetch(`http://localhost:3000/events/${event_id}`, {
+        method: &quot;GET&quot;
+    })
+    const responseJson = await response.json()
+    document.querySelector(&quot;#about_event&quot;).innerHTML += await getEventPageHTML(responseJson)
+}
+
+function categoryFilter() {
+
+    const category = document.querySelector('.event-category');
+    const region = document.querySelector('.event-region');
+    const type_event = document.querySelector('.type-event');
+
+    const cards = document.querySelectorAll('.card')
+
+    category.addEventListener('change', function (event) {
+        const {value} = event.target
+    })
+    region.addEventListener('change', function (event) {
+        const {value} = event.target
+    })
+    type_event.addEventListener('change', function (event) {
+        const {value} = event.target
+    })
+
+    const searchForm = document.querySelector('.search-form')
+    searchForm.addEventListener('submit', (event) =&gt; {
+        event.preventDefault()
+        const event_category = category.value
+        const event_region = region.value
+        const event_type = type_event.value
+
+        console.log(event_category)
+        console.log(event_region)
+        console.log(event_type)
+
+        const cards = document.querySelectorAll(&quot;.card&quot;);
+
+        cards.forEach(card =&gt; {
+            if ((card.classList.contains(event_category)) &amp;&amp;
+                (card.classList.contains(event_region)) &amp;&amp;
+                (card.classList.contains(event_type))) {
+                card.style.display = &quot;block&quot;;
+            } else {
+                card.style.display = &quot;none&quot;;
+            }
+        })
+    })
+}
+
+async function registerForEvent(event_id) {
+    const user_id = JSON.parse(localStorage.user).id;
+    const registration = {
+        &quot;userId&quot;: user_id,
+        &quot;eventId&quot;: event_id
+    }
+    console.log(registration)
+
+    const response = await fetch('http://localhost:3000/userEvents', {
+        method: &quot;POST&quot;,
+        body: JSON.stringify(registration),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+}
+
+async function unsubscribeFromEvent(event_id) {
+    let user_id = JSON.parse(localStorage.user).id
+
+    let users_events = await fetch(`http://localhost:3000/userEvents`, {
+        method: &quot;GET&quot;
+    }).then((response) =&gt; {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return null
+        }
+    }).catch(() =&gt; null)
+
+    for (let user_event of users_events){
+        if ((user_event['userId'] === user_id) &amp;&amp; (user_event['eventId'] === event_id)){
+            const response = await fetch(`http://localhost:3000/userEvents/${user_event['id']}`, {
+                method: &quot;DELETE&quot;
+            })
+        }
+    }
+    loadMyEvents()
+}
+
+function getMyEventHTML(data){
+    return `
+    &lt;div class=&quot;row g-0 mb-2 border&quot;&gt;
+        &lt;div class=&quot;col-md-4 d-flex align-items-center&quot;&gt;
+            &lt;img src=&quot;${data['img']}&quot; class=&quot;img-fluid &quot; alt=&quot;${data['title']}&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-8 d-flex flex-column justify-content-around&quot;&gt;
+            &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;
+                &lt;a class=&quot;btn btn-outline-secondary btn-sm&quot; role=&quot;button&quot;&gt;
+&lt;svg class=&quot;icon m-1&quot;&gt;
+              &lt;use xlink:href=&quot;#tag&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;${data['category_name']}&lt;/a&gt;
+                &lt;p class=&quot;card-text&quot;&gt;${data['date']} ${data['time']}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body text-center d-flex flex-column justify-content-around&quot;
+                 style=&quot;background-color: white&quot;&gt;
+                &lt;h5 class=&quot;card-title&quot;&gt;${data['title']}&lt;/h5&gt;
+                &lt;div class=&quot;card-text d-flex justify-content-around&quot;&gt;
+                    &lt;p class=&quot;card-location&quot;&gt;
+&lt;svg class=&quot;icon m-1&quot;&gt;
+              &lt;use xlink:href=&quot;#place&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;${data['place']}&lt;/p&gt;
+                    &lt;p class=&quot;card-cost&quot;&gt;${data['price']}&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;form class=&quot;flex-column justify-content-around&quot;&gt;
+                    &lt;a onclick=&quot;aboutEvent(${data['id']})&quot; href=&quot;promo.html&quot; class=&quot;btn col-5 align-self-center&quot; style=&quot;background-color: #20c997;&quot;&gt;Подробнее...&lt;/a&gt;
+                    &lt;a onclick=&quot;unsubscribeFromEvent(${data['id']})&quot; href=&quot;#&quot; class=&quot;btn btn-danger col-5 align-self-center&quot;&gt;Отменить запись&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    `
+}
+
+async function loadMyEvents() {
+    let user_id = JSON.parse(localStorage.user).id
+    let users_events = await fetch(`http://localhost:3000/userEvents`, {
+        method: &quot;GET&quot;
+    }).then((response) =&gt; {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return null
+        }
+    }).catch(() =&gt; null)
+
+    document.querySelector(&quot;#my_events&quot;).innerHTML = &quot;&quot;
+    for (let event of users_events) {
+        if (event['userId'] === user_id) {
+
+            const response = await fetch(`http://localhost:3000/events/${event['eventId']}`, {
+                method: &quot;GET&quot;
+            })
+            const responseJson = await response.json()
+
+            document.querySelector(&quot;#my_events&quot;).innerHTML += getMyEventHTML(responseJson)
+        }
+    }
+}
+</code></pre>
+<h1 id="_7">Вывод</h1>
+<p>В ходе данной работы с помощью API реализованы следующие функции: теперь можно создать пользователя, войти в ЛК, отфильтровать мероприятия, записаться на мероприятия и отменить запись.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
